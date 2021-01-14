@@ -13,7 +13,8 @@ __license__ = "BSD"
 
 class ModuleWorkerNoTimeLimit(Worker):
     def __init__(self, pipeline, pipeline_config, constant_hyperparameter,
-            X_train, Y_train, X_valid, Y_valid, budget_type, max_budget, working_directory, permutations=None, *args, **kwargs):
+            X_train, Y_train, X_valid, Y_valid, budget_type, max_budget, 
+                 working_directory, permutations=None, *args, **kwargs):
         self.X_train = X_train #torch.from_numpy(X_train).float()
         self.Y_train = Y_train #torch.from_numpy(Y_train).long()
         self.X_valid = X_valid
