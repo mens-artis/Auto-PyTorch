@@ -11,13 +11,7 @@ class ModuleWorkerNoTimeLimit(Worker):
     
     def compute(self, config, budget, working_directory, config_id, **kwargs):
 
-        start_time = time.time()
-
-        self.autonet_logger.debug("Starting optimization!")
-
         config.update(self.constant_hyperparameter)
-        
-        self.autonet_logger.debug("Budget " + str(budget) + " config: " + str(config))
 
         if self.guarantee_limits and self.budget_type == 'time':
             import pynisher
